@@ -226,9 +226,7 @@ The dashboards use **dynamic KPIs, filters, charts and interactive visuals** to 
 
 ## Conclusion
 
-The **NBFC Analytics Hub** demonstrates a complete end-to-end **Data Engineering and Analytics workflow** for a multi-product NBFC environment.
-
-The project transforms raw product-wise data into a centralized analytical system through **data integration, cleaning, standardization, synchronization, feature engineering, PostgreSQL and SQL-based reporting**, followed by dynamic Power BI dashboards and advanced analytics.
+The **NBFC Analytics Hub** demonstrates a complete end-to-end **Data Engineering and Analytics workflow** for a multi-product NBFC environment. The project transforms raw product-wise data into a centralized analytical system through **data integration, cleaning, standardization, synchronization, feature engineering, PostgreSQL and SQL-based reporting**, followed by dynamic Power BI dashboards and advanced analytics.
 
 The combination of **reusable SQL analysis, automated reporting, interactive dashboards and advanced customer and portfolio analytics** provides a comprehensive view of business growth, collection performance, marketing efficiency, portfolio risk and customer behaviour.
 
