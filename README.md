@@ -42,7 +42,8 @@ The project also includes advanced analytics such as **Static Pool Cohort Analys
 ## Architecture
 
 <p align="center">
-  <img src="./assets/architecture.png" alt="NBFC Analytics Hub Architecture" width="900">
+  <img width="1693" height="929" alt="NBFC Analytics Hub Architecture Pipeline" src="https://github.com/user-attachments/assets/3d9a879a-cbaf-4c44-beec-9b2154ce8e37" />
+
 </p>
 
 <p align="left">
@@ -53,17 +54,13 @@ The project also includes advanced analytics such as **Static Pool Cohort Analys
 
 | Category | Technology |
 |---|---|
-| Programming | Python |
-| Data Processing | Pandas, NumPy |
-| Visualization / Analytics | Matplotlib |
-| Database | PostgreSQL |
-| Database Connectivity | SQLAlchemy, psycopg2 |
-| Query Language | SQL |
+| Programming & Database | Python, PostgreSQL|
+| Data Engineering & Analytics | Pandas, NumPy, Matplotlib |
+| Database Connectivity | SQLAlchemy, psycopg2, python-dotenv |
 | Business Intelligence | Power BI |
-| Raw Data Source | Microsoft Excel |
-| Development Environment | Jupyter Notebook |
-| Credential Management | python-dotenv |
-| Version Control | Git & GitHub |
+| Data Source | Microsoft Excel |
+| Development & Version Control | Jupyter Notebook, Github |
+| Productivity & Gen-AI | ChatGpt & Claude |
 
 <p align="left">
   <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="100%">
@@ -175,7 +172,7 @@ Groups customers based on business value and behavior to identify high-value, re
 The analysis focuses on uncovering insights such as:
 - **Business Growth & Performance**: Analyzing disbursement trends, cumulative growth, MoM performance, fresh vs repeat business and product contribution.
 - **Collection & Recovery**: Measuring collection performance, recovery efficiency and repayment behaviour across products and customer segments.
-- **Risk & NPA Segmentation **: Identifying NPA trends, delinquency buckets and high-risk products or customer segments.
+- **Risk & NPA Segmentation**: Identifying NPA trends, delinquency buckets and high-risk products or customer segments.
 - **Marketing Performance**: Evaluating leads, conversion, marketing spend, CAC and revenue contribution.
 - **Executive Performance**: Providing a consolidated view of business, revenue, collection, marketing and portfolio risk.
 - **Static Pool Cohorts**: Comparing recovery performance across different disbursement cohorts over time.
@@ -205,23 +202,34 @@ The dashboards use **dynamic KPIs, filters, charts and interactive visuals** to 
 ### Dashboard Preview
 
 <p align="center">
-  <img src="./assets/business_performance.png" alt="Business Performance Dashboard" width="48%">
-  <img src="./assets/collection_recovery.png" alt="Collection & Recovery Dashboard" width="48%">
+  <img width="1403" height="795" alt="image" src="https://github.com/user-attachments/assets/82139a38-24b2-45a3-823c-ff10d4340557" />
+
+
+  <img width="1409" height="792" alt="image" src="https://github.com/user-attachments/assets/e2523a41-c8f7-47a1-8e32-00bf0740721e" />
+
 </p>
 
 <p align="center">
-  <img src="./assets/marketing_performance.png" alt="Marketing Performance Dashboard" width="48%">
-  <img src="./assets/risk_analysis.png" alt="NPA & Risk Dashboard" width="48%">
+  <img width="1403" height="788" alt="image" src="https://github.com/user-attachments/assets/5877b7a0-4cd1-418a-a9b9-128e8ffa6ddf" />
+  
+  <img width="1400" height="795" alt="image" src="https://github.com/user-attachments/assets/8a8e7997-9ee4-45f2-bba8-7969833d5281" />
+
 </p>
 
 <p align="center">
-  <img src="./assets/executive_performance.png" alt="Executive Performance Dashboard" width="70%">
+  <img width="1402" height="797" alt="image" src="https://github.com/user-attachments/assets/26ef287f-06ee-47cc-9df7-efa4e69da80c" />
+
 </p>
 
-> Replace the image paths above with your actual Power BI dashboard screenshots.
+<p align="center">
+##Dashboard View
+https://github.com/user-attachments/assets/b8ac74dc-0342-4f42-9915-0e0c6f8b1d31
+
+</p>
 
 <p align="left">
   <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="100%">
+
 </p>
 
 ## Conclusion
