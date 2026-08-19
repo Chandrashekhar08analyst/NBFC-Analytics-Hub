@@ -49,7 +49,7 @@ The analytical system is designed to answer questions such as:
 - Which products or segments carry higher NPA risk?
 - Which marketing activities generate stronger lead and loan conversion?
 - How does recovery performance vary across disbursement cohorts?
-- Which customers segment and cohorts deliver higher long-term value?
+- Which customer segment and cohorts deliver higher long-term value?
 
 
 <p align="left">
@@ -71,12 +71,13 @@ The analytical system is designed to answer questions such as:
 
 | Category | Technology |
 |---|---|
-| **Programming & Database** | Python, PostgreSQL|
+| **Programming** | Python|
+| **Database** | PostgreSQL|
 | **Data Engineering & Analytics** | Pandas, NumPy, Matplotlib |
 | **Database Connectivity** | SQLAlchemy, psycopg2, python-dotenv |
 | **Business Intelligence** | Power BI |
 | **Data Source** | Microsoft Excel |
-| **Development & Version Control** | Jupyter Notebook, Github |
+| **Development & Version Control** | Jupyter Notebook, GitHub |
 
 <p align="left">
   <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="100%">
@@ -127,7 +128,7 @@ The processed datasets are loaded into PostgreSQL using Python with:
 The processed DataFrames are automatically loaded into PostgreSQL tables using Python. Database credentials are stored in a local `.env` file instead of being hardcoded in the project.
 
 ### Business Purpose
-PostgreSQL acts as the **centralized analytical database** for SQL and Power BI to get specific data.
+PostgreSQL acts as the **centralized analytical database** for SQL analysis and Power BI reporting.
 
 
 ## 6. SQL Analysis & Reporting Layer
@@ -142,20 +143,6 @@ SQL reporting views are connected to **Power BI** to build interactive dashboard
 
 A simple **data refresh** updates the dashboards with the latest PostgreSQL data — **no dashboard rebuilding required**.
 
----
-
-## 8. Advanced NBFC Analytics
-Beyond standard reporting and dashboards, the project includes Python-based advanced analytics to understand deeper customer and portfolio behaviour.
-
-### Static Pool Cohort Analysis
-Analyzes recovery performance of disbursement cohorts over time to identify stronger and weaker recovery patterns.
-
-### Customer Lifetime Value & Cohort Analysis
-Analyzes customer behavior across subsequent periods to understand repeat borrowing, customer retention and long-term customer value.
-
-### Customer Segmentation
-Groups customers based on business value and behavior to identify high-value, repeat and strategically important customer segments.
-
 <p align="left">
   <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="100%">
 </p>
@@ -168,9 +155,14 @@ The analysis focuses on uncovering insights such as:
 - **Risk & NPA Segmentation**: Identifying NPA trends, delinquency buckets and high-risk products or customer segments.
 - **Marketing Performance**: Evaluating leads, conversion, marketing spend, CAC and revenue contribution.
 - **Executive Performance**: Providing a consolidated view of business, revenue, collection, marketing and portfolio risk.
-- **Static Pool Cohorts**: Comparing recovery performance across different disbursement cohorts over time.
-- **Customer Lifetime Value**: Identifying customers and segments with stronger long-term business value.
-- **Customer Segmentation**: Understanding customer groups based on value, behaviour and repeat-borrowing patterns.
+
+Beyond standard reporting and dashboards, the project includes Python-based advanced analytics to understand deeper customer and portfolio behavior.
+- Static Pool Cohort Analysis:
+Analyzes recovery performance of disbursement cohorts over time to identify stronger and weaker recovery patterns.
+- Customer Lifetime Value & Cohort Analysis:
+Analyzes customer behavior across subsequent periods to understand repeat borrowing, customer retention and long-term customer value.
+- Customer Segmentation:
+Groups customers based on business value and behavior to identify high-value, repeat and strategically important customer segments.
 
 The analysis helps answer key business questions such as **which products are performing better, where recovery is stronger, which segments carry higher risk, which marketing activities generate better outcomes and which customers provide stronger long-term value**.
 
