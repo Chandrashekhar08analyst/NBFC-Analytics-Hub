@@ -1,4 +1,4 @@
-# NBFC Analytics Hub 🏦 | Loan Portfolio Intelligence Analytics
+# NBFC Analytics Hub 🏦 | End-to-End Loan Portfolio Intelligence
 
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Completed-1F6FEB?style=for-the-badge" alt="Status">
