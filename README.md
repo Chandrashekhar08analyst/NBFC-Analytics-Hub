@@ -1,12 +1,11 @@
 # NBFC Analytics Hub 🏦 | End-to-End Loan Portfolio Intelligence
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-Completed-1F6FEB?style=for-the-badge" alt="Status">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
   <img src="https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
-  <img src="https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="Analytical Libraries">
   <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI">
   <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white" alt="Excel">
+  <img src="https://img.shields.io/badge/Engineering%20%26%20Analytics-8E44AD?style=for-the-badge&logo=python&logoColor=white" alt="Engineering & Analytical Libraries">
 </p>
 
 <p align="center">
