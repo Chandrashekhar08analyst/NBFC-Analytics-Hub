@@ -202,7 +202,7 @@ The dashboards use **dynamic KPIs, filters, charts and interactive visuals** to 
 
 **Dynamic Power BI Report Demo**
 
-[▶️ Watch the Interactive Dashboard Demo](YOUR_VIDEO_LINK_HERE)
+[▶️ Watch the Interactive Dashboard Demo](https://github.com/user-attachments/assets/9c0c6905-2023-4ed3-bfd8-c4c632f8c939)
 
 <p align="left">
   <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="100%">
