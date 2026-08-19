@@ -27,9 +27,7 @@
 
 The **NBFC Analytics Hub** is an end-to-end **Data Engineering and Analytics Platform** designed to cover the complete NBFC data analytics lifecycle — from raw multi-product data to integrated data pipelines, centralized database storage, business analysis, dynamic Power BI dashboards and advanced analytics.
 
-The key business areas covered include **Business Performance, Collections & Recovery Behavior, Marketing Performance, risk Segment and Portfolio Performance**.
-
-The project also includes advanced analytics such as **Static Pool Cohort Analysis, Customer Lifetime Value & Cohort Analysis and Customer Segmentation** to identify recovery trends, customer retention patterns and high-value customer segments.
+The key business areas covered include **Business Performance, Collections & Recovery Behavior, Marketing Performance, risk Segment and Portfolio Performance**. The project also includes advanced analytics such as **Static Pool Cohort Analysis, Customer Lifetime Value & Cohort Analysis and Customer Segmentation** to identify recovery trends, customer retention patterns and high-value customer segments.
 
 > **Data Note:** The project represents realistic NBFC business workflows. Company and product names used for public demonstration are fictional.
 
@@ -38,35 +36,20 @@ The project also includes advanced analytics such as **Static Pool Cohort Analys
 </p>
 
 ## Business Problem
-The project addresses a common challenge in multi-product NBFC environments, where similar business data is maintained across different loan products
-This can create:
-- Inconsistent column naming and data structures
-- Duplicate data preparation workflows
-- Different business definitions across reports
-- Manual reporting dependencies
-- Difficulty comparing product-level performance
-- Data mismatches between operational and reporting datasets
+The project addresses a common challenge in multi-product NBFC environments, where similar business data is maintained across different loan products, making it difficult to **keep data consistent, reduce manual effort, and compare product performance**.
 
 ### Solution
-The project creates a **standardized analytical workflow** where product-wise operational data is integrated into common business structures and processed through a reusable pipeline.
-
-This allows the same business logic, SQL analysis and reporting framework to be applied consistently across products.
-
-<p align="left">
-  <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="100%">
-</p>
+The project creates a **standardized analytical workflow** that integrates product-wise operational data into common business structures and applies reusable business logic, SQL analysis and reporting across products.
 
 ## Key Business Questions
 The analytical system is designed to answer questions such as:
 - Which loan products are driving business growth?
-- How is disbursement performance changing month over month?
-- What is the contribution of fresh vs repeat business?
+- How are disbursements and fresh vs repeat business performing?
 - Which products and segments have stronger collection and recovery performance?
-- Where are delinquency and NPA risks increasing?
+- Which products or segments carry higher NPA risk?
 - Which marketing activities generate stronger lead and loan conversion?
-- Which customer segments provide higher long-term business value?
 - How does recovery performance vary across disbursement cohorts?
-- Which customers demonstrate stronger repeat-borrowing behavior?
+- Which customers segment and cohorts deliver higher long-term value?
 
 
 <p align="left">
@@ -124,13 +107,11 @@ Key activities include:
 
 
 ## 3. Data Synchronization
-This ensures that information across Master, Collection and other related datasets remains consistent and prevents mismatched business values during analysis.
+Relationships between Master, Disbursement, Collection and other datasets are validated to maintain consistency across the analytical system and prevent mismatched business values.
 
 
 ## 4. Feature Engineering
-Raw operational data does not always contain all the fields required for business analysis. Therefore, additional analytical features are created during the ETL process.
-
-Examples include:
+Raw operational data does not always contain all the fields required for business analysis. Therefore, additional analytical features are created during the ETL process. Examples include:
 - Principal Recovered, Interest Recovered
 - Repayment Bucket
 - Age, Salary, Tenure, CIBIL Buckets and many more.
@@ -143,31 +124,23 @@ The processed datasets are loaded into PostgreSQL using Python with:
 - psycopg2
 - python-dotenv
 
-The processed DataFrames are automatically loaded into PostgreSQL tables using Python.
-
-Database credentials are stored in a local `.env` file instead of being hardcoded in the project.
+The processed DataFrames are automatically loaded into PostgreSQL tables using Python. Database credentials are stored in a local `.env` file instead of being hardcoded in the project.
 
 ### Business Purpose
 PostgreSQL acts as the **centralized analytical database** for SQL and Power BI to get specific data.
 
 
 ## 6. SQL Analysis & Reporting Layer
-Once the processed data is available in PostgreSQL, SQL is used to create **reusable analysis queries and reporting views**.
 
-### Business Purpose
-The queries work with the latest PostgreSQL data, allowing **updated analytical and monthly management reports** to be generated without rebuilding the analysis.
+Processed PostgreSQL data is transformed into **reusable SQL queries and reporting views** for recurring business and management analysis.
 
-SQL views also act as **Power BI-ready datasets**, creating a reusable connection between the analytical database and reporting layer.
+SQL views also serve as **Power BI-ready datasets**, enabling consistent and refreshable reporting.
 
+## 7. Power BI Integration & Dynamic Reporting
 
-## 7. Power BI Integration & Dynamic Dashboard
+SQL reporting views are connected to **Power BI** to build interactive dashboards for monitoring **KPIs, trends and business performance**.
 
-The SQL reporting views are connected to **Power BI** to build interactive dashboards and reports that provide stakeholders with **actionable business insights**.
-
-The visualizations help identify key **patterns, trends and performance changes**, making data-driven decision-making easier.
-
-Once the underlying data and SQL views are updated, a simple **Power BI data refresh** updates the dashboards with the latest available information — **no dashboard rebuilding is required**.
-
+A simple **data refresh** updates the dashboards with the latest PostgreSQL data — **no dashboard rebuilding required**.
 
 ---
 
@@ -246,11 +219,9 @@ The dashboards use **dynamic KPIs, filters, charts and interactive visuals** to 
 
 ## Conclusion
 
-The **NBFC Analytics Hub** demonstrates a complete end-to-end **Data Engineering and Analytics workflow** for a multi-product NBFC environment. The project transforms raw product-wise data into a centralized analytical system through **data integration, cleaning, standardization, synchronization, feature engineering, PostgreSQL and SQL-based reporting**, followed by dynamic Power BI dashboards and advanced analytics.
+**NBFC Analytics Hub** demonstrates how raw multi-product operational data can be transformed into a centralized, reusable analytics workflow covering **data integration, data quality, database management, SQL reporting, business intelligence and advanced portfolio analytics**.
 
-The combination of **reusable SQL analysis, automated reporting, interactive dashboards and advanced customer and portfolio analytics** provides a comprehensive view of business growth, collection performance, marketing efficiency, portfolio risk and customer behaviour.
-
-Overall, the project demonstrates how a structured data pipeline can transform raw operational NBFC data into **reusable business intelligence for faster and more informed decision-making** by **Automating Repeating Work**.
+**From Raw Data → Standardized Pipeline → PostgreSQL → SQL Analytics → Power BI → Business Intelligence**
 
 ---
 
