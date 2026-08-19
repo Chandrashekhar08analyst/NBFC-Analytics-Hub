@@ -27,8 +27,6 @@
 
 The **NBFC Analytics Hub** is an end-to-end **Data Engineering and Analytics Platform** designed to cover the complete NBFC data analytics lifecycle — from raw multi-product data to integrated data pipelines, centralized database storage, business analysis, dynamic Power BI dashboards and advanced analytics.
 
-The project addresses a common challenge in multi-product NBFC environments, where similar business data is maintained across different loan products and often requires separate data preparation and reporting processes. This project brings the data into a **standardized analytical workflow**, enabling consistent analysis across products.
-
 The key business areas covered include **Business Performance, Collections & Recovery Behavior, Marketing Performance, risk Segment and Portfolio Performance**.
 
 The project also includes advanced analytics such as **Static Pool Cohort Analysis, Customer Lifetime Value & Cohort Analysis and Customer Segmentation** to identify recovery trends, customer retention patterns and high-value customer segments.
@@ -39,7 +37,43 @@ The project also includes advanced analytics such as **Static Pool Cohort Analys
   <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="100%">
 </p>
 
-## Architecture
+## Business Problem
+The project addresses a common challenge in multi-product NBFC environments, where similar business data is maintained across different loan products
+This can create:
+- Inconsistent column naming and data structures
+- Duplicate data preparation workflows
+- Different business definitions across reports
+- Manual reporting dependencies
+- Difficulty comparing product-level performance
+- Data mismatches between operational and reporting datasets
+
+### Solution
+The project creates a **standardized analytical workflow** where product-wise operational data is integrated into common business structures and processed through a reusable pipeline.
+
+This allows the same business logic, SQL analysis and reporting framework to be applied consistently across products.
+
+<p align="left">
+  <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="100%">
+</p>
+
+## Key Business Questions
+The analytical system is designed to answer questions such as:
+- Which loan products are driving business growth?
+- How is disbursement performance changing month over month?
+- What is the contribution of fresh vs repeat business?
+- Which products and segments have stronger collection and recovery performance?
+- Where are delinquency and NPA risks increasing?
+- Which marketing activities generate stronger lead and loan conversion?
+- Which customer segments provide higher long-term business value?
+- How does recovery performance vary across disbursement cohorts?
+- Which customers demonstrate stronger repeat-borrowing behavior?
+
+
+<p align="left">
+  <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="100%">
+</p>
+
+## 🏗️ Solution Architecture
 
 <p align="center">
   <img width="1693" height="929" alt="NBFC Analytics Hub Architecture Pipeline" src="https://github.com/user-attachments/assets/3d9a879a-cbaf-4c44-beec-9b2154ce8e37" />
@@ -54,13 +88,12 @@ The project also includes advanced analytics such as **Static Pool Cohort Analys
 
 | Category | Technology |
 |---|---|
-| Programming & Database | Python, PostgreSQL|
-| Data Engineering & Analytics | Pandas, NumPy, Matplotlib |
-| Database Connectivity | SQLAlchemy, psycopg2, python-dotenv |
-| Business Intelligence | Power BI |
-| Data Source | Microsoft Excel |
-| Development & Version Control | Jupyter Notebook, Github |
-| Productivity & Gen-AI | ChatGpt & Claude |
+| **Programming & Database** | Python, PostgreSQL|
+| **Data Engineering & Analytics** | Pandas, NumPy, Matplotlib |
+| **Database Connectivity** | SQLAlchemy, psycopg2, python-dotenv |
+| **Business Intelligence** | Power BI |
+| **Data Source** | Microsoft Excel |
+| **Development & Version Control** | Jupyter Notebook, Github |
 
 <p align="left">
   <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="100%">
@@ -76,7 +109,6 @@ Since different products can maintain similar business information using differe
 ### Business Purpose
 Instead of maintaining separate analysis workflows for every product, the integrated dataset allows the **same analytical logic to be applied across all products in one workflow**.
 
----
 
 ## 2. Data Cleaning & Standardization
 The integrated datasets are cleaned and validated before any business analysis is performed.
@@ -90,12 +122,10 @@ Key activities include:
 - Correcting spelling inconsistencies
 - Validating business rules
 
----
 
 ## 3. Data Synchronization
 This ensures that information across Master, Collection and other related datasets remains consistent and prevents mismatched business values during analysis.
 
----
 
 ## 4. Feature Engineering
 Raw operational data does not always contain all the fields required for business analysis. Therefore, additional analytical features are created during the ETL process.
@@ -106,7 +136,6 @@ Examples include:
 - Age, Salary, Tenure, CIBIL Buckets and many more.
 These features convert operational data into analysis-ready business information.
 
----
 
 ## 5. PostgreSQL Database Integration
 The processed datasets are loaded into PostgreSQL using Python with:
@@ -121,7 +150,6 @@ Database credentials are stored in a local `.env` file instead of being hardcode
 ### Business Purpose
 PostgreSQL acts as the **centralized analytical database** for SQL and Power BI to get specific data.
 
----
 
 ## 6. SQL Analysis & Reporting Layer
 Once the processed data is available in PostgreSQL, SQL is used to create **reusable analysis queries and reporting views**.
@@ -129,12 +157,8 @@ Once the processed data is available in PostgreSQL, SQL is used to create **reus
 ### Business Purpose
 The queries work with the latest PostgreSQL data, allowing **updated analytical and monthly management reports** to be generated without rebuilding the analysis.
 
-SQL views also serve as **Power BI-ready datasets**. After updating the views and performing a **Power BI data refresh**, the dashboards reflect the latest available data.
+SQL views also act as **Power BI-ready datasets**, creating a reusable connection between the analytical database and reporting layer.
 
-This creates a **consistent, reusable and efficient reporting workflow**.
-
-
----
 
 ## 7. Power BI Integration & Dynamic Dashboard
 
@@ -148,19 +172,15 @@ Once the underlying data and SQL views are updated, a simple **Power BI data ref
 ---
 
 ## 8. Advanced NBFC Analytics
-
 Beyond standard reporting and dashboards, the project includes Python-based advanced analytics to understand deeper customer and portfolio behaviour.
 
 ### Static Pool Cohort Analysis
-
 Analyzes recovery performance of disbursement cohorts over time to identify stronger and weaker recovery patterns.
 
 ### Customer Lifetime Value & Cohort Analysis
-
 Analyzes customer behavior across subsequent periods to understand repeat borrowing, customer retention and long-term customer value.
 
 ### Customer Segmentation
-
 Groups customers based on business value and behavior to identify high-value, repeat and strategically important customer segments.
 
 <p align="left">
@@ -199,33 +219,25 @@ The dashboards include:
 
 The dashboards use **dynamic KPIs, filters, charts and interactive visuals** to help stakeholders explore trends, compare segments and make data-driven decisions.
 
-### Dashboard Preview
+## Dashboard Preview
 
 <p align="center">
-  <img width="1403" height="795" alt="image" src="https://github.com/user-attachments/assets/82139a38-24b2-45a3-823c-ff10d4340557" />
-
-
-  <img width="1409" height="792" alt="image" src="https://github.com/user-attachments/assets/e2523a41-c8f7-47a1-8e32-00bf0740721e" />
-
+  <img width="1403" height="795" alt="Business Performance Dashboard" src="https://github.com/user-attachments/assets/82139a38-24b2-45a3-823c-ff10d4340557" />
 </p>
 
 <p align="center">
-  <img width="1403" height="788" alt="image" src="https://github.com/user-attachments/assets/5877b7a0-4cd1-418a-a9b9-128e8ffa6ddf" />
-  
-  <img width="1400" height="795" alt="image" src="https://github.com/user-attachments/assets/8a8e7997-9ee4-45f2-bba8-7969833d5281" />
-
+  <img width="1409" height="792" alt="Collection & Recovery Dashboard" src="https://github.com/user-attachments/assets/e2523a41-c8f7-47a1-8e32-00bf0740721e" />
 </p>
 
 <p align="center">
-  <img width="1402" height="797" alt="image" src="https://github.com/user-attachments/assets/26ef287f-06ee-47cc-9df7-efa4e69da80c" />
-
+  <img width="1403" height="788" alt="Marketing Performance Dashboard" src="https://github.com/user-attachments/assets/5877b7a0-4cd1-418a-a9b9-128e8ffa6ddf" />
 </p>
 
-<p align="center">
-##Dashboard View
-https://github.com/user-attachments/assets/b8ac74dc-0342-4f42-9915-0e0c6f8b1d31
+## 🎥 Interactive Dashboard Demo
 
-</p>
+**Dynamic Power BI Report Demo**
+
+[▶️ Watch the Interactive Dashboard Demo](YOUR_VIDEO_LINK_HERE)
 
 <p align="left">
   <img src="https://www.animatedimages.org/data/media/562/animated-line-image-0184.gif" width="100%">
