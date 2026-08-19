@@ -198,9 +198,7 @@ The dashboards use **dynamic KPIs, filters, charts and interactive visuals** to 
   <img width="1403" height="788" alt="Marketing Performance Dashboard" src="https://github.com/user-attachments/assets/5877b7a0-4cd1-418a-a9b9-128e8ffa6ddf" />
 </p>
 
-## 🎥 Interactive Dashboard Demo
-
-**Dynamic Power BI Report Demo**
+## 🎥**Dynamic Power BI Report Demo**
 
 [▶️ Watch the Interactive Dashboard Demo](https://github.com/user-attachments/assets/9c0c6905-2023-4ed3-bfd8-c4c632f8c939)
 
